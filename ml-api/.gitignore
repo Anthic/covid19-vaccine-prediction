@@ -1,10 +1,47 @@
-@"
+﻿# Environment variables
 .env
-*.pkl
+.env.local
+.env.*.local
+
+# Python
 *.pyc
 __pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual Environment
 venv/
+env/
+ENV/
+
+# Model files
+*.pkl
+*.h5
+*.pt
+*.pth
+*.onnx
+*.joblib
+
+# IDE
 .vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
 *.log
+logs/
+
+# Reports
 reports/
-"@ | Set-Content .gitignore
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
