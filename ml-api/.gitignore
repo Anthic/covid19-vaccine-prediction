@@ -1,0 +1,10 @@
+@"
+.env
+*.pkl
+*.pyc
+__pycache__/
+venv/
+.vscode/
+*.log
+reports/
+"@ | Set-Content .gitignore
