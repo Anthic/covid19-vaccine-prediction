@@ -1,4 +1,4 @@
-# Core Framework
+﻿# Core Framework
 fastapi==0.104.1
 uvicorn[standard]==0.24.0
 pydantic==2.5.0
@@ -16,8 +16,8 @@ transformers==4.45.0
 torch==2.5.0
 accelerate==0.34.0
 
-# Database
-pymongo==4.10.1
+# Database (Fixed: motor 3.6.0 requires pymongo<4.10)
+pymongo==4.9.1
 motor==3.6.0
 
 # PDF Generation

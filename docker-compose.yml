@@ -1,0 +1,75 @@
+version: "3.8"
+
+services:
+  # FastAPI ML Service
+  fastapi:
+    image: covid-fastapi:latest
+    container_name: covid-fastapi
+    ports:
+      - "8000:8000"
+    environment:
+      - MONGODB_URL=mongodb://mongo:27017/covid_health_assistant
+      - DB_NAME=covid_health_assistant
+      - LLM_MODEL=Qwen/Qwen2.5-0.5B-Instruct
+      - USE_GPU=false
+      - HOST=0.0.0.0
+      - PORT=8000
+    volumes:
+      - ./ml-api/models:/app/models
+    depends_on:
+      mongo:
+        condition: service_healthy
+    networks:
+      - covid-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # MongoDB Database
+  mongo:
+    image: mongo:7
+    container_name: covid-mongodb
+    ports:
+      - "27017:27017"
+    environment:
+      - MONGO_INITDB_DATABASE=covid_health_assistant
+    volumes:
+      - mongo_data:/data/db
+    networks:
+      - covid-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "mongod", "--version"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
+  # Redis (for JWT token management)
+  redis:
+    image: redis:7-alpine
+    container_name: covid-redis
+    ports:
+      - "6379:6379"
+    networks:
+      - covid-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+
+# Private network
+networks:
+  covid-network:
+    driver: bridge
+
+# Persistent storage
+volumes:
+  mongo_data:
+    driver: local
