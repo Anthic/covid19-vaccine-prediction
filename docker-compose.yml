@@ -43,12 +43,11 @@ services:
       - covid-network
     restart: unless-stopped
     healthcheck:
-      test: ["CMD", "mongod", "--version"]
+      test: ["CMD", "mongod", "--eval", "db.adminCommand('ping')"]
       interval: 10s
       timeout: 5s
       retries: 5
       start_period: 10s
-
   # Redis (for JWT token management)
   redis:
     image: redis:7-alpine

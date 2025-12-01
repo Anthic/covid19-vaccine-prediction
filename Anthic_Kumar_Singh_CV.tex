@@ -1,0 +1,168 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{times}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{multicol}
+\usepackage{graphicx}
+
+% Define colors
+\definecolor{linkblue}{RGB}{0,102,204}
+\definecolor{headergray}{RGB}{64,64,64}
+
+% Hyperlink setup
+\hypersetup{
+    colorlinks=true,
+    urlcolor=linkblue,
+    linkcolor=linkblue
+}
+
+% Section formatting
+\titleformat{\section}{\large\bfseries\color{headergray}}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{6pt}{2pt}
+
+% Remove page numbering
+\pagestyle{empty}
+
+% Custom spacing
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\renewcommand{\baselinestretch}{0.95}
+
+\begin{document}
+
+% Header with name and contact info on left, space for photo on right
+\begin{minipage}[t]{0.68\textwidth}
+    {\LARGE\bfseries Anthic Kumar Singh}\\[2pt]
+    {\large Software Engineer \& Data Scientist}\\[2pt]
+    Santosh, Tangail, Bangladesh | +880 1717182035, +880 1779080742\\[1pt]
+    \href{mailto:anthickumarsingh2@gmail.com}{anthickumarsingh2@gmail.com} | \href{https://www.linkedin.com/in/anthic}{linkedin.com/in/anthic} | \href{https://github.com/Anthic}{github.com/Anthic}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.28\textwidth}
+    \vspace{0pt}
+    \begin{center}
+        \includegraphics[width=2.2cm,height=2.5cm]{formalImg.png}
+    \end{center}
+\end{minipage}
+
+\vspace{4pt}
+
+% Technical Skills Section
+\section{Technical Skills}
+
+\textbf{Languages \& Frameworks:} JavaScript (ES6+), TypeScript, Python, SQL, React, Redux, Node.js, Express.js, Django, FastAPI\\[0.5pt]
+\textbf{Machine Learning \& Data:} Scikit-learn, Pandas, NumPy, XGBoost, Random Forest, SHAP, Statistics, Bootstrap Analysis\\[0.5pt]
+\textbf{Databases \& Cloud:} MongoDB, Mongoose ODM, PostgreSQL, NoSQL Design, Firebase, Vercel, Docker\\[0.5pt]
+\textbf{Tools \& Methodologies:} Git, Webpack, Streamlit, Jest, TDD, Agile Development, Cross-Validation, HTML5, CSS3
+
+\vspace{2pt}
+
+% Professional Experience Section
+\section{Professional Experience}
+
+\textbf{MERN Stack Developer \& Team Lead} \hfill \textbf{April 2025 -- Present}\\
+\textit{The Nexgenix} | \href{https://thenexgenix.com/}{thenexgenix.com} | Dhaka, Bangladesh
+
+\begin{itemize}[leftmargin=15pt, itemsep=0.5pt, parsep=0pt]
+    \item Orchestrated cross-functional development team of 5 engineers delivering BazarCard, NexMail AI, and Edunity platform using agile methodologies
+    \item Architected scalable MERN stack solutions with React.js, Node.js/Express.js, and MongoDB ensuring 99\% deployment success rate
+    \item Mentored junior developers in modern JavaScript frameworks resulting in 40\% improvement in code quality metrics
+\end{itemize}
+
+\vspace{2pt}
+
+% Open-Source Contributions Section
+\section{Open-Source Contributions \& Projects}
+
+\textbf{NexMail AI -- Intelligent Email Generation Platform} \hfill \textbf{2025}\\
+\textit{Production Application} | \href{https://nexmail-ai.thenexgenix.com/}{nexmail-ai.thenexgenix.com}
+
+\begin{itemize}[leftmargin=15pt, itemsep=0.5pt, parsep=0pt]
+    \item Engineered full-stack email automation platform integrating OpenAI GPT API serving 500+ active users
+    \item Developed responsive React.js frontend with custom UI components and real-time email preview functionality
+    \item Constructed Python backend using Django and FastAPI achieving 200ms average response time
+\end{itemize}
+
+\vspace{1pt}
+
+\textbf{COVID-19 Vaccine Side Effects Prediction -- Novel MAFS Algorithm} \hfill \textbf{2025}\\
+\textit{Research Project} | \href{https://github.com/Anthic/covid19-vaccine-prediction}{GitHub} | \href{https://covid19-vaccine-prediction-furyjttsea4wjtevvrhnga.streamlit.app/}{Live Demo}
+
+\begin{itemize}[leftmargin=15pt, itemsep=0.5pt, parsep=0pt]
+    \item Pioneered Multi-Stage Adaptive Feature Selection (MAFS) algorithm achieving 67.09\% accuracy with superior stability (0.89)
+    \item Processed 395-participant dataset with 26 clinical variables, implementing bootstrap analysis and ROC/PR curves
+    \item Utilized Scikit-learn, XGBoost, Random Forest, and SHAP demonstrating 74.51\% F1-score and 74.43\% AUC-ROC
+    \item Developed interactive Streamlit web application for clinical decision support and prepared Q1 journal manuscript
+\end{itemize}
+
+\vspace{1pt}
+
+\textbf{Historic Artifacts -- Cultural Heritage Management Platform} \hfill \textbf{2024}\\
+\textit{Full-Stack Application} | \href{https://historic-artifact.web.app}{historic-artifact.web.app}
+
+\begin{itemize}[leftmargin=15pt, itemsep=0.5pt, parsep=0pt]
+    \item Architected cultural heritage management system using React.js with Lottie animations and Firebase authentication
+    \item Implemented backend with Node.js/Express.js and MongoDB, designing efficient CRUD operations for artifact management
+    \item Deployed scalable application on Vercel achieving 95+ Lighthouse scores across performance, accessibility, and SEO
+\end{itemize}
+
+\vspace{2pt}
+
+% Education Section
+\section{Education}
+
+\textbf{Bachelor of Science in Statistics} \hfill \textbf{CGPA: 3.20/4.00}\\
+\textit{Mawlana Bhashani Science and Technology University} | Tangail, Bangladesh
+
+\vspace{2pt}
+
+% Extracurricular Activities Section
+\section{Leadership \& Extracurricular Activities}
+
+\begin{itemize}[leftmargin=15pt, itemsep=0.5pt, parsep=0pt]
+    \item \textbf{Volunteer Coordinator} -- Programming Hero Reunion Programme: Organized technical workshops for 200+ participants
+    \item \textbf{Performance Artist} -- Cultural Activities: Active participant in dance, acting, and stage performances
+    \item \textbf{Technical Mentor} -- Peer Learning: Conducted coding sessions for junior students in JavaScript, React, and data science
+\end{itemize}
+
+\end{document}
+\end{itemize}
+
+\vspace{1pt}
+
+\textbf{Historic Artifacts -- Cultural Heritage Management Platform} \hfill \textbf{2024}\\
+\textit{Full-Stack Application} | \href{https://historic-artifact.web.app}{historic-artifact.web.app}
+
+\begin{itemize}[leftmargin=15pt, itemsep=0.5pt, parsep=0pt]
+    \item Architected cultural heritage management system using React.js with Lottie animations and Firebase authentication
+    \item Implemented backend with Node.js/Express.js and MongoDB, designing efficient CRUD operations for artifact management
+    \item Deployed scalable application on Vercel achieving 95+ Lighthouse scores across performance, accessibility, and SEO
+\end{itemize}
+
+\vspace(2pt)
+
+% Education Section
+\section{Education}
+
+\textbf{Bachelor of Science in Statistics} \hfill \textbf{CGPA: 3.20/4.00}\\
+\textit{Mawlana Bhashani Science and Technology University} | Tangail, Bangladesh
+
+\vspace{2pt}
+
+% Extracurricular Activities Section
+\section{Leadership \& Extracurricular Activities}
+
+\begin{itemize}[leftmargin=15pt, itemsep=0.5pt, parsep=0pt]
+    \item \textbf{Volunteer Coordinator} -- Programming Hero Reunion Programme: Organized technical workshops for 200+ participants
+    \item \textbf{Performance Artist} -- Cultural Activities: Active participant in dance, acting, and stage performances
+    \item \textbf{Technical Mentor} -- Peer Learning: Conducted coding sessions for junior students in JavaScript, React, and data science
+\end{itemize}
+
+\end{document}
