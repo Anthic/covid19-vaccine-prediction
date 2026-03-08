@@ -16,13 +16,15 @@ venv/
 env/
 ENV/
 
-# Model files
-*.pkl
-*.h5
-*.pt
-*.pth
-*.onnx
-*.joblib
+# NOTE: *.pkl files are INCLUDED in git (model files needed for deployment)
+# Only exclude very large model files if needed
+# *.pkl  <-- intentionally NOT excluded
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
 
 # IDE
 .vscode/
